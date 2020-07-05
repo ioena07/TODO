@@ -1,0 +1,9 @@
+<p><b>Are you sure want to delete "{{item}}"?</b></p>
+<form method="post" action="">
+    {% csrf_token %}
+    <input type="submit" value="Delete task">
+</form>
+<form method="post" action="{% url 'list' %}">
+    {% csrf_token %}
+    <input type="submit" value="Cancel">
+</form>
